@@ -6,12 +6,12 @@
 //
 
 import Foundation
-struct GridModel: Identifiable,Hashable {
-    let id = UUID()
+struct GridModel:Hashable {
+    let serialNumber:String
     let town: String
     let condition: String
     let imagename:String
     func hash(into hasher: inout Hasher) {
-
+        hasher.combine(serialNumber)
     }
 }

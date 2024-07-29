@@ -6,13 +6,13 @@
 //
 
 import Foundation
-struct WeatherDay:Identifiable,Hashable{
-    let id = UUID()
+struct WeatherDay:Hashable{
+    let serialNumber:String
     let dayOfWeek:String
     let imageName:String
     let condition:String
     let temperature:Int
     func hash(into hasher: inout Hasher) {
-
+        hasher.combine(serialNumber)
     }
 }

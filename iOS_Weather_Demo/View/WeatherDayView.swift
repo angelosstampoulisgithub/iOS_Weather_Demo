@@ -27,5 +27,5 @@ struct WeatherDayView: View {
 }
 
 #Preview {
-    WeatherDayView(day:.init(dayOfWeek: "", imageName: "", condition: "", temperature: 0))
+    WeatherDayView(day:.init(serialNumber: "", dayOfWeek: "", imageName: "", condition: "", temperature: 0))
 }

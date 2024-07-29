@@ -43,7 +43,7 @@ class ViewModel:ObservableObject{
                 let fetchDailyArray = await fetchWeather.fetchWeatherDataDaily(endpoint: "/daily")
                 var weatherDailyArray:[WeatherDay] = []
                 for item in fetchDailyArray{
-                    weatherDailyArray.append(WeatherDay(dayOfWeek: helper.convertISODate(date: item.date, dateFormat: "E"), imageName: helper.createIcon(condition: item.condition), condition: item.condition, temperature: item.temperature))
+                    weatherDailyArray.append(WeatherDay(serialNumber: "", dayOfWeek: helper.convertISODate(date: item.date, dateFormat: "E"), imageName: helper.createIcon(condition: item.condition), condition: item.condition, temperature: item.temperature))
                 }
                 continuation.resume(returning: weatherDailyArray)
             }
